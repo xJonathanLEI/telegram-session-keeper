@@ -9,7 +9,7 @@
 
 	<PropertyGroup>
     <IsPackable>true</IsPackable>
-    <PackageVersion>0.1.0</PackageVersion>
+    <PackageVersion>0.1.1</PackageVersion>
     <PackageId>TelegramSessionKeeper</PackageId>
   	<Authors>Jonathan LEI</Authors>
 		<Description>A tool for creating and using Telegram backup sessions</Description>
