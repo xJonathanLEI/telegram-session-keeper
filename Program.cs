@@ -133,36 +133,41 @@ namespace TelegramSessionKeeper
                 if (!client.IsUserAuthorized())
                     throw new Exception("Session not authenticated");
 
-                var dialogs = (TLDialogsSlice)await client.GetUserDialogsAsync();
-                var officialDialog = dialogs.Dialogs
-                    .FirstOrDefault(item => item.Peer is TLPeerUser peerUser && peerUser.UserId == OFFICIAL_ACCOUNT_ID);
+                var rawDialogHistory = await client.GetHistoryAsync(
+                    peer: new TLInputPeerUser
+                    {
+                        UserId = OFFICIAL_ACCOUNT_ID,
+                    },
+                    limit: 5
+                );
 
-                if (officialDialog is null)
+                TLMessage[] recentMessages;
+                if (rawDialogHistory is TLMessagesSlice tLMessagesSlice)
                 {
-                    Console.WriteLine("Official account dialog not found");
-                }
-                else
-                {
-                    var dialogHistory = (TLMessagesSlice)await client.GetHistoryAsync(
-                        peer: new TLInputPeerUser
-                        {
-                            UserId = OFFICIAL_ACCOUNT_ID,
-                        },
-                        limit: 5
-                    );
-                    var recentMessages = dialogHistory.Messages
+                    recentMessages = tLMessagesSlice.Messages
                         .Reverse()
                         .Cast<TLMessage>()
                         .ToArray();
+                }
+                else if (rawDialogHistory is TLMessages tlMessages)
+                {
+                    recentMessages = tlMessages.Messages
+                        .Reverse()
+                        .Cast<TLMessage>()
+                        .ToArray();
+                }
+                else
+                {
+                    throw new Exception($"Unknown type: {rawDialogHistory.GetType().FullName}");
+                }
 
-                    Console.WriteLine("Recent messages:");
-                    for (int ind = 0; ind < recentMessages.Length; ind++)
-                    {
-                        Console.WriteLine($"[{ind + 1} / {recentMessages.Length}]: {recentMessages[ind].Message}");
+                Console.WriteLine("Recent messages:");
+                for (int ind = 0; ind < recentMessages.Length; ind++)
+                {
+                    Console.WriteLine($"[{ind + 1} / {recentMessages.Length}]: {recentMessages[ind].Message}");
 
-                        if (ind != recentMessages.Length - 1)
-                            Console.WriteLine();
-                    }
+                    if (ind != recentMessages.Length - 1)
+                        Console.WriteLine();
                 }
             }
             finally
