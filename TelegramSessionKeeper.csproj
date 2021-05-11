@@ -3,6 +3,26 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>tgsession</ToolCommandName>
   </PropertyGroup>
+
+	<PropertyGroup>
+    <IsPackable>true</IsPackable>
+    <PackageVersion>0.1.0</PackageVersion>
+    <PackageId>TelegramSessionKeeper</PackageId>
+  	<Authors>Jonathan LEI</Authors>
+		<Description>A tool for creating and using Telegram backup sessions</Description>
+		<Copyright>Copyright © Jonathan LEI 2021</Copyright>
+		<PackageTags>telegram</PackageTags>
+		<RepositoryUrl>https://github.com/xJonathanLEI/TelegramSessionKeeper</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageProjectUrl>https://github.com/xJonathanLEI/TelegramSessionKeeper</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta1.21216.1" />
+    <PackageReference Include="TLSharp" Version="0.1.0.574" />
+  </ItemGroup>
 
 </Project>
