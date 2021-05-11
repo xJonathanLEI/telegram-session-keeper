@@ -18,6 +18,10 @@ Install the [NuGet package](https://www.nuget.org/packages/TelegramSessionKeeper
 $ dotnet tool install --global TelegramSessionKeeper
 ```
 
+## Prerequisite
+
+To use the tool you must first create a [Telegram Application](https://core.telegram.org/api/obtaining_api_id) and obtain a pair of _API ID_ and _API Hash_. You **MUST** use the same application for creating and later using the session. It is therefore recommended that you backup both the session file and the key pair.
+
 ## License
 
 [MIT](./LICENSE)
