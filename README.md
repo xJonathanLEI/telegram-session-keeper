@@ -8,6 +8,14 @@ With a backup session file, one can retain access to the corresponding account, 
 >
 > Telegram session messages are strictly sequential. You **cannot** use an old session file twice. Copying before using a session file is thus pointless.
 
+## Installation
+
+Install the [NuGet package](https://www.nuget.org/packages/TelegramSessionKeeper/) as a global .NET Core tool:
+
+```sh
+$ dotnet tool install --global TelegramSessionKeeper
+```
+
 ## License
 
 [MIT](./LICENSE)
