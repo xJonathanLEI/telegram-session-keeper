@@ -24,4 +24,9 @@ To use the tool you must first create a [Telegram Application](https://core.tele
 
 ## License
 
-[MIT](./LICENSE)
+Licensed under either of
+
+- Apache License, Version 2.0 ([LICENSE-APACHE](./LICENSE-APACHE) or <http://www.apache.org/licenses/LICENSE-2.0>)
+- MIT license ([LICENSE-MIT](./LICENSE-MIT) or <http://opensource.org/licenses/MIT>)
+
+at your option.
