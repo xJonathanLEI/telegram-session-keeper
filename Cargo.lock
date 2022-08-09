@@ -276,7 +276,7 @@ dependencies = [
 [[package]]
 name = "grammers-client"
 version = "0.3.0"
-source = "git+https://github.com/xJonathanLEI/grammers?branch=fix/tokio_deps#acb552da8905f48f21448ccafaf5d523fbec4763"
+source = "git+https://github.com/Lonami/grammers#acb8c593a1b52c8f9ac5284ed4bbd7c96a00544e"
 dependencies = [
  "chrono",
  "futures-util",
@@ -297,7 +297,7 @@ dependencies = [
 [[package]]
 name = "grammers-crypto"
 version = "0.3.0"
-source = "git+https://github.com/xJonathanLEI/grammers?branch=fix/tokio_deps#acb552da8905f48f21448ccafaf5d523fbec4763"
+source = "git+https://github.com/Lonami/grammers#acb8c593a1b52c8f9ac5284ed4bbd7c96a00544e"
 dependencies = [
  "aes",
  "getrandom",
@@ -312,7 +312,7 @@ dependencies = [
 [[package]]
 name = "grammers-mtproto"
 version = "0.3.0"
-source = "git+https://github.com/xJonathanLEI/grammers?branch=fix/tokio_deps#acb552da8905f48f21448ccafaf5d523fbec4763"
+source = "git+https://github.com/Lonami/grammers#acb8c593a1b52c8f9ac5284ed4bbd7c96a00544e"
 dependencies = [
  "bytes",
  "crc32fast",
@@ -328,7 +328,7 @@ dependencies = [
 [[package]]
 name = "grammers-mtsender"
 version = "0.3.0"
-source = "git+https://github.com/xJonathanLEI/grammers?branch=fix/tokio_deps#acb552da8905f48f21448ccafaf5d523fbec4763"
+source = "git+https://github.com/Lonami/grammers#acb8c593a1b52c8f9ac5284ed4bbd7c96a00544e"
 dependencies = [
  "bytes",
  "grammers-mtproto",
@@ -340,7 +340,7 @@ dependencies = [
 [[package]]
 name = "grammers-session"
 version = "0.3.0"
-source = "git+https://github.com/xJonathanLEI/grammers?branch=fix/tokio_deps#acb552da8905f48f21448ccafaf5d523fbec4763"
+source = "git+https://github.com/Lonami/grammers#acb8c593a1b52c8f9ac5284ed4bbd7c96a00544e"
 dependencies = [
  "grammers-tl-gen",
  "grammers-tl-parser",
@@ -351,7 +351,7 @@ dependencies = [
 [[package]]
 name = "grammers-tl-gen"
 version = "0.3.0"
-source = "git+https://github.com/xJonathanLEI/grammers?branch=fix/tokio_deps#acb552da8905f48f21448ccafaf5d523fbec4763"
+source = "git+https://github.com/Lonami/grammers#acb8c593a1b52c8f9ac5284ed4bbd7c96a00544e"
 dependencies = [
  "grammers-tl-parser",
 ]
@@ -359,7 +359,7 @@ dependencies = [
 [[package]]
 name = "grammers-tl-parser"
 version = "1.0.1"
-source = "git+https://github.com/xJonathanLEI/grammers?branch=fix/tokio_deps#acb552da8905f48f21448ccafaf5d523fbec4763"
+source = "git+https://github.com/Lonami/grammers#acb8c593a1b52c8f9ac5284ed4bbd7c96a00544e"
 dependencies = [
  "crc32fast",
 ]
@@ -367,7 +367,7 @@ dependencies = [
 [[package]]
 name = "grammers-tl-types"
 version = "0.3.0"
-source = "git+https://github.com/xJonathanLEI/grammers?branch=fix/tokio_deps#acb552da8905f48f21448ccafaf5d523fbec4763"
+source = "git+https://github.com/Lonami/grammers#acb8c593a1b52c8f9ac5284ed4bbd7c96a00544e"
 dependencies = [
  "grammers-tl-gen",
  "grammers-tl-parser",
