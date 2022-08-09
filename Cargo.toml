@@ -1,6 +1,17 @@
 [package]
 name = "tg-keeper"
 version = "0.1.0"
+authors = ["Jonathan LEI <me@xjonathan.dev>"]
+license = "MIT OR Apache-2.0"
 edition = "2021"
+description = """
+A tool for creating and using Telegram backup sessions
+"""
 
 [dependencies]
+anyhow = "1.0.60"
+clap = { version = "3.2.16", features = ["derive"] }
+colored = "2.0.0"
+grammers-client = { git = "https://github.com/xJonathanLEI/grammers", branch = "fix/tokio_deps" }
+grammers-session = { git = "https://github.com/xJonathanLEI/grammers", branch = "fix/tokio_deps" }
+tokio = { version = "1.20.1", features = ["full"] }
